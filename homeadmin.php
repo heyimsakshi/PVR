@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>START PAGE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="Home 2.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT ME</a>
+   
+    <a href="login.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LOG IN</a>
+    <a href="administration.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ADMINISTRATION</a>
+	<a href="logout.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LOG OUT</a>
+	<a href="logout.php" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SIGN UP</a>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT ME</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="login.php" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">LOG IN</a>
+  <a href="administration.php" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">LOG IN</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="prestige.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Great Hollywood Movie</h3>
+      <p><b>Everyone should Watch</b></p>   
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="harry.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+     <h3>Great Hollywood Movie</h3>
+      <p><b>Everyone should Watch</b></p>  
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="chris.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Great Hollywood Movie</h3>
+      <p><b>Everyone should Watch</b></p>  
+    </div>
+  </div>
+
+ 
+ 
+  <!--THE about section-->
+   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="about">
+    <h2 class="w3-wide w3-center">ABOUT ME</h2>
+   PVR Cinemas is a film entertainment sole proprietorship in India.The company began as a joint venture agreement between Priya Exhibitors Private Limited and village roadshow
+   Limited in 1995 with 60:40 ratio, began its commercial operations in June 1997. The company is founded by Ajay Bijli,who is the Chairman and managing Managing Director.
+   Ajay Bijli's brother Sanjeev Kumar Bijli is the Joint Managing Director of PVR Ltd. The company also operates a pro-active CSR wing under PVR Nest.
+   The company has its origin as Tejas dhawan in South Delhi, which was bought by Ajay Bijli's father in 1978,
+   who also owned a trucking business, Amritsar Transport Co. In 1988, Bijli took over the running of the cinema hall, which was revamped in 1990, and 
+   its success led to the founding PVR Cinemas.In 2003., ICICI Ventures invested ₹40 crore in PVR when Village Roadshow decided to pull out of the partnership.
+   In 2012, Kanakia group owned CINEMAX cinema chain was bought by Cine Hospitality Private Ltd, a subsidiary of PVR Cinemas for ₹395 crore (US$57 million),
+   making PVR the largest cinema chain in India.
+   </div>
+ 
+
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
